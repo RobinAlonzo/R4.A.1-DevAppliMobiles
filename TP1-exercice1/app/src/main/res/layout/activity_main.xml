@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/logoresto" />
+
+    <TextView
+        android:id="@+id/compositionView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="composition menu" />
+
+    <TextView
+        android:id="@+id/entreesView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Entrées" />
+
+    <Spinner
+        android:id="@+id/entreesSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/listeEntrees" />
+
+    <TextView
+        android:id="@+id/platView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Plat" />
+
+    <Spinner
+        android:id="@+id/platSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/listePlats" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="dessert" />
+
+    <Spinner
+        android:id="@+id/dessertSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/listeDesserts" />
+
+    <TextView
+        android:id="@+id/quantiteTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="quantité" />
+
+    <Spinner
+        android:id="@+id/quantiteSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/listeNumero" />
+
+    <EditText
+        android:id="@+id/quantiteView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Quantité" />
+
+    <Button
+        android:id="@+id/ajouterButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ajouter" />
+
+    <TextView
+        android:id="@+id/recapView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Recapitulatif" />
+
+    <EditText
+        android:id="@+id/remarquesInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Remarques" />
+
+    <Button
+        android:id="@+id/enregistrerButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ENREGISTRER" />
+
+    <Button
+        android:id="@+id/annulerButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ANNULER" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>
