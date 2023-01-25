@@ -135,10 +135,10 @@
             android:id="@+id/listeEntreesParam"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:entries="@array/listeEntrees"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:layout_weight="3" />
+            android:layout_weight="3"
+            android:entries="@array/listeEntrees" />
 
         <Spinner
             android:id="@+id/listePlatsParam"
@@ -185,7 +185,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:backgroundTint="@color/red"
-        android:text="Supprimer"
+        android:text="Enregistrer"
         android:textColor="@color/black"
         android:textStyle="bold" />
 
