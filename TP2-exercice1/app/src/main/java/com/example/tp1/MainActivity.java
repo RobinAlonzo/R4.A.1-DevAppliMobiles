@@ -3,11 +3,15 @@ package com.example.tp1;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -39,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
         enregistrerUtilisateurButton = findViewById(R.id.enregistrerUtilisateurButton);
         annulerUtilisateurButton = findViewById(R.id.annulerUtilisateurButton);
 
+
         //Selectionner la quantité dans le spinner et l'afficher dans la view quantité
         quantiteUtilisateurSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -48,9 +53,21 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
-                quantiteUtilisateurInput.setText("1");
             }
         });
+
+        //Si un utilisateur saisie une quantité à la main le spinner se désactive durant la saisie
+        quantiteUtilisateurInput.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView textView, int i, KeyEvent keyEvent) {
+                if (quantiteUtilisateurInput.getText().toString().length() > 0)
+                    quantiteUtilisateurSpinner.setEnabled(false);
+                else
+                    quantiteUtilisateurSpinner.setEnabled(true);
+                return false;
+            }
+        });
+
 
     }
 
