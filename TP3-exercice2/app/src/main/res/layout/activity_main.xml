@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            app:srcCompat="@drawable/logoresto" />
+
+        <TextView
+            android:id="@+id/compositionView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="2"
+            android:text="composition menu" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tilteLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/entreesView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:text="Entrées"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/platView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:ems="10"
+            android:gravity="center"
+            android:text="Plat"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:text="dessert"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/choixLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/entreesUtilisateurSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3" />
+
+        <Spinner
+            android:id="@+id/platUtilisateurSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3" />
+
+        <Spinner
+            android:id="@+id/dessertUtilisateurSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/quantiteTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="quantité" />
+
+    <LinearLayout
+        android:id="@+id/quantiteLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/quantiteUtilisateurInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="30"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Quantité" />
+
+        <Spinner
+            android:id="@+id/quantiteUtilisateurSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="70"
+            android:entries="@array/listeNumero" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/ajouterUtilisateurButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ajouter" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_100">
+
+        <TextView
+            android:id="@+id/recapView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Recapitulatif"
+            android:textSize="18sp" />
+    </ScrollView>
+
+    <EditText
+        android:id="@+id/remarquesUtilisateurInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Remarques" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/buttonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/enregistrerUtilisateurButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="40"
+            android:textColor="@color/red"
+            android:textStyle="bold"
+            android:text="ENREGISTRER" />
+
+        <Button
+            android:id="@+id/annulerUtilisateurButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="60"
+            android:text="ANNULER" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/parametrageButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Paramètres" />
+
+    <Button
+        android:id="@+id/gestionPlats"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Gestion des plats" />
+
+</LinearLayout>
